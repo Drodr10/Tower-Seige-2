@@ -95,3 +95,12 @@ function mouseReleased()
     sling.fly();
     gamestate = OFF;
 }
+
+function keyPressed()
+{
+    if(keyCode === 32){
+      sling.attach(this.hexagon);
+      gamestate = ON;
+      Matter.Body.setPosition(this.hexagon,{x: 200, y: 200});
+    }
+}
